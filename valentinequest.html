@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Be My Valentine?</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            background-color: pink;
+        }
+
+        .container {
+            margin-top: 100px;
+        }
+
+        .btn {
+            align-items: center;
+            padding: 15px 30px;
+            font-size: 20px;
+            margin: 20px;
+            cursor: pointer;
+            border: none;
+            border-radius: 10px;
+        }
+
+        #yes {
+            background-color: red;
+            color: white;
+        }
+
+        #no {
+            background-color: white;
+            color: red;
+            position: absolute;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Bujju kutyy!! Will you be my Valentine? ❤️</h1>
+        <button id="yes" class="btn">Yes</button>
+        <button id="no" class="btn">No</button>
+    </div>
+
+    <script>
+        document.getElementById("yes").addEventListener("click", function () {
+            window.location.href = "valentines.html";
+        });
+
+        document.getElementById("no").addEventListener("mouseover", function () {
+            let x = Math.random() * (window.innerWidth - this.offsetWidth);
+            let y = Math.random() * (window.innerHeight - this.offsetHeight);
+            this.style.left = `${x}px`;
+            this.style.top = `${y}px`;
+        });
+    </script>
+</body>
+
+</html>
